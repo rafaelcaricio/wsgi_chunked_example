@@ -1,0 +1,8 @@
+uwsgi:
+    socket: /var/run/pod_shared/simple_server.sock
+    socket-timeout: 5
+    chmod-socket: 766
+    module: simple_app:app
+    logformat : uWSGI: %(method) %(uri) -> %(status)
+    threads: 4
+
